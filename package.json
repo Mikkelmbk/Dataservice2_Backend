@@ -1,0 +1,22 @@
+{
+  "name": "dataservice2_backend",
+  "version": "1.0.0",
+  "description": "Første test Projekt af Backend",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mikkelmbk/Dataservice2_Backend.git"
+  },
+  "author": "Mikkel Back Koll",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mikkelmbk/Dataservice2_Backend/issues"
+  },
+  "homepage": "https://github.com/Mikkelmbk/Dataservice2_Backend#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
