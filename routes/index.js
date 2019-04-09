@@ -46,18 +46,19 @@ module.exports = function(app){
 			}
 		})
 	})
-	// app.get('/getAllProducts', function (req, res) {
-	// 	db2.query('SELECT * FROM produkter', function (err, rows) { // * for at vælge alle properties i databasens array
-	// 		if (err) {
-	// 			res.send(err)
-	// 		} else {
-	// 			res.send(rows)
-	// 		}
-	// 	})
-	// })
 
-	app.get('/getProduct/:id', function (req, res) {
-		db2.query('SELECT * FROM produkter WHERE id = ?',[req.params.id], function (err, rows) {
+	app.get('/getAllProducts', function (req, res) {
+		db2.query('SELECT * FROM produkter', function (err, rows) { // * for at vælge alle properties i databasens array
+			if (err) {
+				res.send(err)
+			} else {
+				res.send(rows)
+			}
+		})
+	})
+
+	app.get('/getProduct/:id', function (req, res) { // specifik søgning efter det id man har skrevet i url'en efter getProduct/
+		db2.query('SELECT * FROM produkter WHERE id = ?',[req.params.id], (err, rows) => {
 			if (err) {
 				res.send(err)
 			} else {
