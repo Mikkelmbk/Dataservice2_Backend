@@ -38,7 +38,7 @@ module.exports = function(app){
 	});
 
 	app.get('/getAllUsers', function (req, res) {
-		db1.query('SELECT fornavn FROM bruger', function (err, rows) {
+		db1.query('SELECT fornavn FROM bruger', function (err, rows) { // fornavn for at finde fornavn propertien i databasens array
 			if (err) {
 				res.send(err)
 			} else {
@@ -47,7 +47,7 @@ module.exports = function(app){
 		})
 	})
 	app.get('/getAllProducts', function (req, res) {
-		db2.query('SELECT * FROM produkter', function (err, rows) {
+		db2.query('SELECT * FROM produkter', function (err, rows) { // * for at vælge alle properties i databasens array
 			if (err) {
 				res.send(err)
 			} else {
